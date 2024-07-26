@@ -19,90 +19,94 @@ export default function SidebarItems({ toggleSidebar, sidebar }) {
     <nav>
       <div
         id="sidebar"
-        className="hidden sm:flex flex-col relative overflow-y-scroll"
+        className="relative flex-col hidden overflow-y-scroll sm:flex"
       >
         <div
           id="top"
-          className="mt-3 flex items-center justify-center h-[50px] border-b border-gray-400"
+          className="mt-2 flex items-center justify-center h-[50px] border-b border-gray-400"
         >
           <span
             id="logo"
-            className=" text-2xl text-center font-bold text-blue-700 "
+            className="text-2xl font-bold text-center text-blue-700 "
           >
             OdysseyAdmin
           </span>
         </div>
         <div id="center" className="pl-5">
           <ul>
-            <p id="title" className=" text-lg font-sm text-gray-600 mt-4">
+            <p id="title" className="mt-4 text-lg text-gray-600 font-sm">
               MAIN
             </p>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <DashboardIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">Dashboard</span>
+              <span className="text-[18px] ml-2 text-gray-500">Dashboard</span>
             </li>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <PersonOutlineIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">Users</span>
+              <span className="text-[18px] ml-2 text-gray-500">Users</span>
             </li>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <ProductionQuantityLimitsIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">Products</span>
+              <span className="text-[18px] ml-2 text-gray-500">Products</span>
             </li>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <ShoppingBagIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">Orders</span>
+              <span className="text-[18px] ml-2 text-gray-500">Orders</span>
             </li>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <LocalShippingIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">Delivery</span>
+              <span className="text-[18px] ml-2 text-gray-500">Delivery</span>
             </li>
-            <p id="title" className=" text-lg font-sm text-gray-600 mt-4">
+            <p id="title" className="mt-4 text-lg text-gray-600 font-sm">
               USEFUL
             </p>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <InsertChartIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">Stats</span>
+              <span className="text-[18px] ml-2 text-gray-500">Stats</span>
             </li>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <NotificationsIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">Notifications</span>
+              <span className="text-[18px] ml-2 text-gray-500">
+                Notifications
+              </span>
             </li>
-            <p id="title" className=" text-lg font-sm text-gray-600 mt-4">
+            <p id="title" className="mt-4 text-lg text-gray-600 font-sm">
               SERVICE
             </p>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <MonitorHeartIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">System Health</span>
+              <span className="text-[18px] ml-2 text-gray-500">
+                System Health
+              </span>
             </li>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <QueryStatsIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">Logs</span>
+              <span className="text-[18px] ml-2 text-gray-500">Logs</span>
             </li>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <SettingsIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">Settings</span>
+              <span className="text-[18px] ml-2 text-gray-500">Settings</span>
             </li>
-            <p id="title" className=" text-lg font-sm text-gray-600 mt-4">
+            <p id="title" className="mt-4 text-lg text-gray-600 font-sm">
               USER
             </p>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <AccountCircleIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">Profile</span>
+              <span className="text-[18px] ml-2 text-gray-500">Profile</span>
             </li>
-            <li className="flex items-center p-2 gap-2 hover:bg-blue-100 cursor-pointer text-xl">
+            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100">
               <LogoutIcon className="text-blue-500" />
-              <span className="text-[18px] ml-2">Logout</span>
+              <span className="text-[18px] ml-2 text-gray-500">Logout</span>
             </li>
           </ul>
           <div id="bottom" className="flex items-center m-3">
             <div
               id="colorOption"
-              className="w-6 h-6 rounded-md border border-blue-500 cursor-pointer bg-white m-1"
+              className="w-6 h-6 m-1 bg-white border border-blue-500 rounded-md cursor-pointer"
             ></div>
             <div
               id="colorOption"
-              className="w-6 h-6 rounded-md border border-blue-500 cursor-pointer bg-black m-1"
+              className="w-6 h-6 m-1 bg-black border border-blue-500 rounded-md cursor-pointer"
             ></div>
           </div>
         </div>
@@ -110,11 +114,11 @@ export default function SidebarItems({ toggleSidebar, sidebar }) {
       {/* mobile screen configuration */}
       <div
         id="top"
-        className="p-2 m-1 md:hidden lg:hidden flex items-center justify-between border-b "
+        className="flex items-center justify-between p-2 m-1 border-b md:hidden lg:hidden "
       >
         <span
           id="logo"
-          className=" text-xl text-center font-bold text-blue-700 "
+          className="text-xl font-bold text-center text-blue-700 "
         >
           OdysseyAdmin
         </span>
@@ -125,68 +129,74 @@ export default function SidebarItems({ toggleSidebar, sidebar }) {
         </div>
       </div>
       {sidebar && (
-        <div className="fixed right-0 w-56 h-[72%] p-3 border-l border-b rounded-md flex flex-col justify-center z-50">
-          <div className="min-h-[100%] overflow-y-scroll">
+        <div className="fixed right-0 w-56 h-[72%] p-3 border-l border-b rounded-md flex flex-col justify-center z-10 bg-white">
+          <div className="min-h-[100%] overflow-y-scroll ">
             <ul className="">
-              <p id="title" className=" text-lg font-sm text-gray-600">
+              <p id="title" className="text-lg text-gray-600 font-sm">
                 MAIN
               </p>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <DashboardIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">Dashboard</span>
+                <span className="text-[18px] ml-2 text-gray-500">
+                  Dashboard
+                </span>
               </li>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <PersonOutlineIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">Users</span>
+                <span className="text-[18px] ml-2 text-gray-500">Users</span>
               </li>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <ProductionQuantityLimitsIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">Products</span>
+                <span className="text-[18px] ml-2 text-gray-500">Products</span>
               </li>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <ShoppingBagIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">Orders</span>
+                <span className="text-[18px] ml-2 text-gray-500">Orders</span>
               </li>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <LocalShippingIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">Delivery</span>
+                <span className="text-[18px] ml-2 text-gray-500">Delivery</span>
               </li>
-              <p id="title" className=" text-lg font-sm text-gray-600 mt-4">
+              <p id="title" className="mt-4 text-lg text-gray-600 font-sm">
                 USEFUL
               </p>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <InsertChartIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">Stats</span>
+                <span className="text-[18px] ml-2 text-gray-500">Stats</span>
               </li>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <NotificationsIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">Notifications</span>
+                <span className="text-[18px] ml-2 text-gray-500">
+                  Notifications
+                </span>
               </li>
-              <p id="title" className=" text-lg font-sm text-gray-600 mt-4">
+              <p id="title" className="mt-4 text-lg text-gray-600 font-sm">
                 SERVICE
               </p>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <MonitorHeartIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">System Health</span>
+                <span className="text-[18px] ml-2 text-gray-500">
+                  System Health
+                </span>
               </li>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <QueryStatsIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">Logs</span>
+                <span className="text-[18px] ml-2 text-gray-500">Logs</span>
               </li>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <SettingsIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">Settings</span>
+                <span className="text-[18px] ml-2 text-gray-500">Settings</span>
               </li>
-              <p id="title" className=" text-lg font-sm text-gray-600 mt-4">
+              <p id="title" className="mt-4 text-lg text-gray-600 font-sm">
                 USER
               </p>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <AccountCircleIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">Profile</span>
+                <span className="text-[18px] ml-2 text-gray-500">Profile</span>
               </li>
-              <li className="flex items-center p-2 gap-2 hover:bg-blue-100 text-xl">
+              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100">
                 <LogoutIcon className="text-blue-500" />
-                <span className="text-[18px] ml-2">Logout</span>
+                <span className="text-[18px] ml-2 text-gray-500">Logout</span>
               </li>
             </ul>
           </div>
