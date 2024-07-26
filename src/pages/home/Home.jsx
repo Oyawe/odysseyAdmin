@@ -1,5 +1,6 @@
 import { Navbar } from "../../components/Navbar";
 import { Sidebar } from "../../components/Sidebar";
+import Widget from "../../components/Widget";
 
 const Home = () => {
   return (
@@ -7,7 +8,12 @@ const Home = () => {
       <Sidebar />
       <div id="home_container" className="sm:w-[100%]">
         <Navbar />
-        home container
+        <div className="flex flex-col flex-wrap gap-5 p-5 mt-7 sm:mt-0 sm:flex-row md:flex-col lg:flex-row">
+          <Widget type="user" />
+          <Widget type="order" />
+          <Widget type="earnings" />
+          <Widget type="balance" />
+        </div>
       </div>
     </div>
   );

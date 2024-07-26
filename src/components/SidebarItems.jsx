@@ -14,20 +14,17 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 // eslint-disable-next-line react/prop-types
-export default function SidebarItems({ toggleSidebar, sidebar }) {
+export default function SidebarItems({ toggleSidebar, sidebar, isActive }) {
   return (
     <nav>
-      <div
-        id="sidebar"
-        className="relative flex-col hidden overflow-y-scroll sm:flex"
-      >
+      <div id="sidebar" className="relative flex-col hidden sm:flex">
         <div
           id="top"
-          className="mt-2 flex items-center justify-center h-[50px] border-b border-gray-400"
+          className="mt-2 flex items-center justify-center h-[50px] border-b border-gray-400 bg-clip-text text-transparent"
         >
           <span
             id="logo"
-            className="text-2xl font-bold text-center text-blue-700 "
+            className="text-2xl font-bold text-center text-transparent bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text "
           >
             OdysseyAdmin
           </span>
@@ -118,7 +115,7 @@ export default function SidebarItems({ toggleSidebar, sidebar }) {
       >
         <span
           id="logo"
-          className="text-xl font-bold text-center text-blue-700 "
+          className="text-xl font-bold text-center text-transparent bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text "
         >
           OdysseyAdmin
         </span>
@@ -128,9 +125,11 @@ export default function SidebarItems({ toggleSidebar, sidebar }) {
           </button>
         </div>
       </div>
-      {sidebar && (
-        <div className="fixed right-0 w-56 h-[72%] p-3 border-l border-b rounded-md flex flex-col justify-center z-10 bg-white">
-          <div className="min-h-[100%] overflow-y-scroll ">
+      {!isActive && sidebar && (
+        <div
+          className={`fixed overflow-y-scroll overscroll-none right-0 w-56 h-[72%] p-3 border-l border-b rounded-md flex flex-col justify-center z-20 bg-white `}
+        >
+          <div className="min-h-[100%]">
             <ul className="">
               <p id="title" className="text-lg text-gray-600 font-sm">
                 MAIN
@@ -202,6 +201,7 @@ export default function SidebarItems({ toggleSidebar, sidebar }) {
           </div>
         </div>
       )}
+      {/* {isActive && !sidebar} */}
     </nav>
   );
 }
