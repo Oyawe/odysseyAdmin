@@ -1,3 +1,5 @@
+import { Chart } from "../../components/Chart";
+import Featured from "../../components/Featured";
 import { Navbar } from "../../components/Navbar";
 import { Sidebar } from "../../components/Sidebar";
 import Widget from "../../components/Widget";
@@ -13,6 +15,10 @@ const Home = () => {
           <Widget type="order" />
           <Widget type="earnings" />
           <Widget type="balance" />
+        </div>
+        <div className="flex flex-col flex-wrap gap-6 p-5 charts sm:mt-0 sm:flex-row md:flex-col lg:flex-row">
+          <Featured />
+          <Chart />
         </div>
       </div>
     </div>

@@ -59,7 +59,7 @@ export default function Widget({ type }) {
           {data.isMoney && "$"}
           {amount}
         </span>
-        <span className="font-sans text-lg border-b border-gray-500 link">
+        <span className="text-lg font-medium border-b border-gray-500 link">
           {data.link}
         </span>
       </div>

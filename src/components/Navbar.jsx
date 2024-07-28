@@ -46,11 +46,7 @@ export const Navbar = () => {
             </span>
           </div>
           <ListOutlinedIcon className="text-lg mr-7" />
-          <img
-            src={good}
-            alt="avatar"
-            className="w-8 h-8 text-lg rounded-full mr-7"
-          />
+          <img src={good} alt="avatar" className="w-8 h-8 rounded-full mr-7" />
         </div>
       </div>
     </div>
