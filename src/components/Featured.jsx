@@ -3,7 +3,7 @@ import {
   KeyboardArrowUp,
   MoreVert,
 } from "@mui/icons-material";
-import { CircularProgressbar } from "react-circular-progressbar";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 export default function Featured() {
@@ -15,7 +15,15 @@ export default function Featured() {
       </div>
       <div className="flex flex-col items-center justify-center gap-3 p-5 bottom">
         <div className="featured-chart w-[150px] h-[150px]">
-          <CircularProgressbar value={70} text={"70%"} strokeWidth={5} />
+          <CircularProgressbar
+            value={70}
+            text={"70%"}
+            strokeWidth={5}
+            styles={buildStyles({
+              pathColor: `rgba(59, 130, 246, 1)`,
+              textColor: "#000",
+            })}
+          />
         </div>
         <p className="text-xl font-semibold text-gray-400 title">
           Total sales made today
