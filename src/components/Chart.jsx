@@ -1,15 +1,10 @@
 import {
-  AreaChart,
   LineChart,
   Line,
-  Legend,
-  Area,
   XAxis,
-  //   YAxis,
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  YAxis,
 } from "recharts";
 
 const data = [
@@ -44,34 +39,6 @@ export const Chart = () => {
             activeDot={{ r: 8 }}
           />
         </LineChart>
-        {/* <AreaChart
-          width={730}
-          height={250}
-          data={data}
-          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
-        >
-          <defs>
-            <linearGradient id="total" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#60A5FA" stopOpacity={0.8} />
-              <stop
-                offset="95%"
-                stopColor="rgba(59, 130, 246, 1)"
-                stopOpacity={0}
-              />
-            </linearGradient>
-          </defs>
-          <XAxis dataKey="name" stroke="gray" />
-          {/* <YAxis /> */}
-        {/* <CartesianGrid strokeDasharray="3 3" className="chartGrid" />
-          <Tooltip />
-          <Area
-            type="monotone"
-            dataKey="Total"
-            stroke="#8884d8"
-            fillOpacity={1}
-            fill="url(#total)"
-          />
-        // </AreaChart> */}
       </ResponsiveContainer>
     </div>
   );
