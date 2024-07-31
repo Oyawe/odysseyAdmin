@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="flex flex-col sm:flex-row">
       <Sidebar />
-      <div id="home_container" className="sm:w-[100%]">
+      <div id="home_container" className="sm:w-[600px] lg:w-[100%]">
         <Navbar />
         <div className="flex flex-col flex-wrap gap-5 p-5 mt-7 sm:mt-0 sm:flex-row md:flex-col lg:flex-row">
           <Widget type="user" />
