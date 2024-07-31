@@ -1,11 +1,15 @@
 import {
   AreaChart,
+  LineChart,
+  Line,
+  Legend,
   Area,
   XAxis,
-  YAxis,
+  //   YAxis,
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  YAxis,
 } from "recharts";
 
 const data = [
@@ -20,11 +24,27 @@ const data = [
 export const Chart = () => {
   return (
     <div className="flex flex-col flex-1 chart min-h-[200px] sm:min-h-[300px] shadow-md shadow-slate-400 sm:p-4 p-0">
-      <div className="p-2 text-xl font-semibold text-gray-400 title">
+      <div className="p-2 text-xl text-gray-400 title">
         Last 6 Months (Revenue)
       </div>
       <ResponsiveContainer width="100%" height={500}>
-        <AreaChart
+        <LineChart
+          width={500}
+          height={300}
+          data={data}
+          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" className="chartGrid" />
+          <XAxis dataKey="name" />
+          <Tooltip />
+          <Line
+            type="monotone"
+            dataKey="Total"
+            stroke="rgba(59, 130, 246, 1)"
+            activeDot={{ r: 8 }}
+          />
+        </LineChart>
+        {/* <AreaChart
           width={730}
           height={250}
           data={data}
@@ -42,7 +62,7 @@ export const Chart = () => {
           </defs>
           <XAxis dataKey="name" stroke="gray" />
           {/* <YAxis /> */}
-          <CartesianGrid strokeDasharray="3 3" className="chartGrid" />
+        {/* <CartesianGrid strokeDasharray="3 3" className="chartGrid" />
           <Tooltip />
           <Area
             type="monotone"
@@ -51,7 +71,7 @@ export const Chart = () => {
             fillOpacity={1}
             fill="url(#total)"
           />
-        </AreaChart>
+        // </AreaChart> */}
       </ResponsiveContainer>
     </div>
   );

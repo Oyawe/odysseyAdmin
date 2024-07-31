@@ -2,6 +2,7 @@ import { Chart } from "../../components/Chart";
 import Featured from "../../components/Featured";
 import { Navbar } from "../../components/Navbar";
 import { Sidebar } from "../../components/Sidebar";
+import { TableComp } from "../../components/Table";
 import Widget from "../../components/Widget";
 
 const Home = () => {
@@ -19,6 +20,12 @@ const Home = () => {
         <div className="flex flex-col flex-wrap gap-6 p-5 charts sm:mt-0 sm:flex-row md:flex-col lg:flex-row">
           <Featured />
           <Chart />
+        </div>
+        <div className="p-5 m-5 shadow-md listcontainer shadow-slate-400">
+          <div className="p-2 mb-2 text-xl font-semibold text-gray-400 border-b border-gray-300 sm:mb-4 listTitle">
+            Latest Transactions
+          </div>
+          <TableComp />
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ export default function Featured() {
   return (
     <div className="flex flex-col shadow-md featured basis-1/3 shadow-slate-400 p-7">
       <div className="flex items-center justify-between w-full text-gray-400 top">
-        <h1 className="text-xl font-semibold">Total Revenue</h1>
+        <h1 className="text-xl">Total Revenue</h1>
         <MoreVert className="text-sm" />
       </div>
       <div className="flex flex-col items-center justify-center gap-3 p-5 bottom">
