@@ -69,7 +69,7 @@ export default function Widget({ type }) {
           {diff}
         </div>
         <div
-          className={`flex items-center self-end p-2 rounded-md ${
+          className={`flex items-center self-end p-2 rounded-lg ${
             data.title === "USERS" ? `bg-red-100` : ""
           } ${data.title === "ORDERS" ? `bg-blue-100` : ""} ${
             data.title === "EARNINGS" ? `bg-green-100` : ""

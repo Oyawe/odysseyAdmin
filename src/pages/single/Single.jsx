@@ -12,7 +12,7 @@ const Single = () => {
         <Navbar />
         <div className="flex flex-col gap-5 p-5 mt-12 sm:mt-0 lg:flex-row top">
           <div className="relative flex flex-col p-5 shadow-md basis-1/3 shadow-slate-400 left">
-            <div className="absolute top-0 right-0 p-2 text-blue-500 rounded-md text-md bg-blue-50 editbutton ">
+            <div className="absolute top-0 right-0 p-2 text-blue-500 rounded-bl-lg text-md bg-blue-50 editbutton ">
               Edit
             </div>
             <p className="mb-5 text-2xl text-gray-400 title">Information</p>

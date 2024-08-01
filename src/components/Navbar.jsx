@@ -18,7 +18,7 @@ export const Navbar = () => {
       >
         <div
           id="search"
-          className="flex items-center justify-center px-1 mt-1 border border-gray-500 rounded-md"
+          className="flex items-center justify-center px-1 mt-1 border border-gray-500 rounded-lg"
         >
           <input
             type="text"

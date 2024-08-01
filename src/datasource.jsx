@@ -40,7 +40,7 @@ export const userColumns = [
             (params.row.status === "pending" &&
               `text-yellow-600 bg-yellow-50`) ||
             (params.row.status === "passive" && `text-red-600 bg-red-50`)
-          }  p-2 rounded-xl  `}
+          }  p-2 rounded-lg  `}
         >
           {params.row.status}
         </span>

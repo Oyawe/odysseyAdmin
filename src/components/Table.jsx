@@ -135,7 +135,7 @@ export const TableComp = () => {
                       row.status === "Approved"
                         ? `text-green-600 bg-green-100`
                         : `text-yellow-600 bg-yellow-50`
-                    }  p-2 rounded-xl `}
+                    }  p-2 rounded-lg `}
                   >
                     {row.status}
                   </span>

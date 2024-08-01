@@ -53,7 +53,7 @@ const New = ({ inputs, title }) => {
                   />
                 </div>
               ))}
-              <button className="self-center w-24 p-2 mt-2 text-lg font-semibold text-white bg-blue-600 border-none rounded-md cursor-pointer lg:basis-1/6">
+              <button className="self-center w-24 p-2 mt-2 text-lg font-semibold text-white bg-blue-600 border-none rounded-lg cursor-pointer lg:basis-1/6">
                 Send
               </button>
             </form>
