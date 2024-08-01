@@ -16,13 +16,12 @@ const data = [
   { name: "June", Total: 1700 },
 ];
 
-export const Chart = () => {
+// eslint-disable-next-line react/prop-types
+export const Chart = ({ height, title }) => {
   return (
     <div className="flex flex-col flex-1 chart min-h-[200px] sm:min-h-[300px] shadow-md shadow-slate-400 sm:p-4 p-0">
-      <div className="p-2 text-xl text-gray-400 title">
-        Last 6 Months (Revenue)
-      </div>
-      <ResponsiveContainer width="100%" height={500}>
+      <div className="p-2 text-xl text-gray-400 title">{title}</div>
+      <ResponsiveContainer width="100%" height={height}>
         <LineChart
           width={500}
           height={300}

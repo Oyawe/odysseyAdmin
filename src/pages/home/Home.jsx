@@ -19,7 +19,7 @@ const Home = () => {
         </div>
         <div className="flex flex-col flex-wrap gap-6 p-5 charts sm:mt-0 sm:flex-row md:flex-col lg:flex-row">
           <Featured />
-          <Chart />
+          <Chart height={450} title="Last 6 Months (Revenue)" />
         </div>
         <div className="p-5 m-5 shadow-md listcontainer shadow-slate-400">
           <div className="p-2 mb-2 text-xl font-semibold text-gray-400 border-b border-gray-300 sm:mb-4 listTitle">

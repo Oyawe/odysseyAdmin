@@ -36,7 +36,7 @@ const DataTable = () => {
         sx={{
           maxWidth: 1800,
           fontFamily: "Nunito, sans-serif",
-          fontSize: 16,
+          fontSize: 18,
         }}
       />
     </div>
