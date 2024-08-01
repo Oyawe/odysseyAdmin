@@ -60,8 +60,8 @@ export const TableComp = () => {
     },
   ];
 
-  const sx = { fontFamily: "Nunito, sans-serif", fontSize: 14 };
-  const sxF = { fontFamily: "Nunito, sans-serif", fontSize: 13 };
+  const sx = { fontFamily: "Nunito, sans-serif", fontSize: 18 };
+  const sxF = { fontFamily: "Nunito, sans-serif", fontSize: 16 };
 
   return (
     <div className="overflow-y-scroll ">
@@ -112,9 +112,7 @@ export const TableComp = () => {
                       alt={row.product}
                       className="w-[32px] h-[32px] rounded-full mr-2 sm:mr-5 object-cover"
                     />
-                    <div className="text-[12px] sm:text-[13px] text-center">
-                      {row.product}
-                    </div>
+                    <div className="text-center">{row.product}</div>
                   </div>
                 </TableCell>
                 <TableCell sx={sxF} className="tableCell dark:text-gray-300">

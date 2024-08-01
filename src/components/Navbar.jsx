@@ -15,7 +15,7 @@ export const Navbar = () => {
     <div>
       <div
         id="navbar"
-        className="sm:border-b sm:px-4 px-2 max-w-min sm:max-w-full mx-auto border-gray-400 dark:border-gray-600 h-[50px] sm:mt-2 flex flex-col sm:flex-row items-center text-gray-600 dark:text-gray-400 text-xl"
+        className="sm:border-b sm:px-4 px-2 max-w-min sm:max-w-full mx-auto mt-16 border-gray-400 dark:border-gray-600 h-[50px] sm:mt-2 flex flex-col sm:flex-row items-center text-gray-600 dark:text-gray-400 text-xl"
       >
         <div
           id="wrapper"

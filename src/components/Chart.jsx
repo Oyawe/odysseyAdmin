@@ -30,6 +30,7 @@ export const Chart = ({ height, title }) => {
           height={300}
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+          className="text-black"
         >
           <CartesianGrid
             strokeDasharray="3 3"

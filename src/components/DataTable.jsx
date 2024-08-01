@@ -60,7 +60,7 @@ const DataTable = () => {
         pageSizeOptions={[10]}
         checkboxSelection
         sx={{
-          maxWidth: 1800,
+          maxWidth: 2000,
           fontFamily: "Nunito, sans-serif",
           fontSize: 18,
           ".MuiDataGrid-columnSeparator": {

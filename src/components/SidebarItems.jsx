@@ -157,7 +157,9 @@ export default function SidebarItems({ toggleSidebar, sidebar, isActive }) {
       {/* mobile screen configuration */}
       <div
         id="top"
-        className="flex items-center justify-between p-2 m-1 border-b dark:border-gray-600 md:hidden lg:hidden "
+        className={`${
+          isActive ? "bg-white dark:bg-[#222] py-4 shadow-md" : "bg-none py-4"
+        } fixed w-full z-50 transition-all flex items-center justify-between p-4 border-b dark:border-gray-600 md:hidden lg:hidden`}
       >
         <Link to="/">
           <span
@@ -168,7 +170,7 @@ export default function SidebarItems({ toggleSidebar, sidebar, isActive }) {
           </span>
         </Link>
         <div className="mr-1">
-          <button onClick={toggleSidebar}>
+          <button onClick={toggleSidebar} className="">
             {sidebar ? (
               <CloseIcon className="dark:text-gray-400" />
             ) : (
@@ -179,7 +181,7 @@ export default function SidebarItems({ toggleSidebar, sidebar, isActive }) {
       </div>
       {!isActive && sidebar && (
         <div
-          className={`fixed overflow-y-scroll overscroll-none right-0 w-56 h-[72%] p-3 border-l border-b rounded-md flex flex-col justify-center z-20 bg-white dark:bg-[#222] `}
+          className={`fixed overflow-y-scroll overscroll-none top-[70px] right-1 w-56 h-[530px] p-3 border-l border-b rounded-md flex flex-col justify-center z-20 bg-white dark:bg-[#222] `}
         >
           <div className="min-h-[100%]">
             <ul className="">

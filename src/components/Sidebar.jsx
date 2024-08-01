@@ -7,7 +7,7 @@ export const Sidebar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      window.scrollY > 10 ? setIsActive(true) : setIsActive(false);
+      window.scrollY > 15 ? setIsActive(true) : setIsActive(false);
     });
   });
 
