@@ -6,12 +6,12 @@ import { TableComp } from "../../components/Table";
 
 const Single = () => {
   return (
-    <div className="flex flex-col sm:flex-row single">
+    <div className="flex flex-col dark:bg-[#222] sm:flex-row single">
       <Sidebar />
       <div className="w-full overflow-x-auto singleContainer">
         <Navbar />
         <div className="flex flex-col gap-5 p-5 mt-12 sm:mt-0 lg:flex-row top">
-          <div className="relative flex flex-col p-5 shadow-md basis-1/3 shadow-slate-400 left">
+          <div className="relative flex flex-col p-5 shadow-md basis-1/3 shadow-slate-400 dark:shadow-gray-600 left">
             <div className="absolute top-0 right-0 p-2 text-blue-500 rounded-bl-lg text-md bg-blue-50 editbutton ">
               Edit
             </div>
@@ -22,24 +22,24 @@ const Single = () => {
                 alt="pic"
                 className="itemImg w-[100px] h-[100px] rounded-full object-cover"
               />
-              <div className="w-full text-center sm:text-start details">
-                <h1 className="mb-2 text-3xl font-semibold text-gray-700 itemTitile">
+              <div className="w-full text-center sm:text-start dark:text-gray-400 details">
+                <h1 className="mb-2 text-3xl font-semibold text-gray-700 dark:text-gray-100 itemTitile">
                   Ashley Cole
                 </h1>
                 <div className="mb-2 detailItem text-md">
-                  <span className="mr-1 font-bold text-gray-700 itemKey">
+                  <span className="mr-1 font-bold text-gray-700 dark:text-gray-100 itemKey">
                     Email:
                   </span>
                   <span className="itemValue">ashleycole@gmail.com</span>
                 </div>
                 <div className="mb-2 detailItem text-md">
-                  <span className="mr-1 font-bold text-gray-700 itemKey">
+                  <span className="mr-1 font-bold text-gray-700 dark:text-gray-100 itemKey">
                     Phone:
                   </span>
                   <span className="itemValue">+2349063401239</span>
                 </div>
                 <div className="mb-2 detailItem text-md">
-                  <span className="mr-1 font-bold text-gray-700 itemKey">
+                  <span className="mr-1 font-bold text-gray-700 dark:text-gray-100 itemKey">
                     Address:
                   </span>
                   <span className="itemValue">
@@ -47,7 +47,7 @@ const Single = () => {
                   </span>
                 </div>
                 <div className="mb-2 detailItem text-md">
-                  <span className="mr-1 font-bold text-gray-700 itemKey">
+                  <span className="mr-1 font-bold text-gray-700 dark:text-gray-100 itemKey">
                     Country:
                   </span>
                   <span className="itemValue">Nigeria</span>
@@ -59,7 +59,7 @@ const Single = () => {
             <Chart height={270} title="User Expenditures (Last 6 Months)" />
           </div>
         </div>
-        <div className="p-5 mx-5 my-1 shadow-md bottom shadow-slate-400">
+        <div className="p-5 mx-5 my-1 shadow-md bottom shadow-slate-400 dark:shadow-gray-600">
           <p className="mb-5 text-2xl text-gray-400 title">Last Transactions</p>
           <TableComp />
         </div>

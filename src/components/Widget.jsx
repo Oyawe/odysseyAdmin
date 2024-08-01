@@ -52,14 +52,14 @@ export default function Widget({ type }) {
   }
 
   return (
-    <div className="flex justify-between flex-1 rounded-lg shadow-md h-[200px] widget shadow-slate-400 p-7 text-lg mt-4 sm:mt-0">
+    <div className="flex justify-between flex-1 rounded-lg shadow-md h-[200px] widget shadow-slate-400 dark:shadow-gray-600 p-7 text-lg mt-4 sm:mt-0">
       <div className="flex flex-col justify-between space-y-4 md:space-y-3 lg:space-y-0 ">
         <span className="text-lg text-gray-400 title">{data.title}</span>
-        <span className="text-3xl font-extralight">
+        <span className="text-3xl font-extralight dark:text-gray-300">
           {data.isMoney && "$"}
           {amount}
         </span>
-        <span className="text-lg font-medium border-b border-gray-500 link">
+        <span className="text-lg font-medium border-b border-gray-500 dark:text-gray-300 link">
           {data.link}
         </span>
       </div>

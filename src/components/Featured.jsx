@@ -3,12 +3,15 @@ import {
   KeyboardArrowUp,
   MoreVert,
 } from "@mui/icons-material";
+import { useContext } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { DarModeContext } from "../context/darkModeContext";
 
 export default function Featured() {
+  const { darkMode } = useContext(DarModeContext);
   return (
-    <div className="flex flex-col shadow-md featured basis-1/3 shadow-slate-400 p-7">
+    <div className="flex flex-col shadow-md featured basis-1/3 shadow-slate-400 dark:shadow-gray-600 p-7">
       <div className="flex items-center justify-between w-full text-gray-400 top">
         <h1 className="text-xl">Total Revenue</h1>
         <MoreVert className="text-sm" />
@@ -21,14 +24,14 @@ export default function Featured() {
             strokeWidth={5}
             styles={buildStyles({
               pathColor: `rgba(59, 130, 246, 1)`,
-              textColor: "#000",
+              textColor: darkMode ? "#ffffffae" : "#000",
             })}
           />
         </div>
         <p className="text-xl font-semibold text-gray-400 title">
           Total sales made today
         </p>
-        <p className="text-4xl amount">$420</p>
+        <p className="text-4xl amount dark:text-gray-300">$420</p>
         <p className="text-[16px] text-center text-gray-400 sm:text-lg desc">
           Previous transactions processing. Last payments many not be included.
         </p>

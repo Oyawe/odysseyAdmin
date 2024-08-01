@@ -15,7 +15,7 @@ export const Sidebar = () => {
     setSidebar(!sidebar);
   };
   return (
-    <div className="bg-white border-gray-400 sm:w-64 sm:border-r sm:min-h-screen">
+    <div className="bg-white dark:bg-[#222] border-gray-400 dark:border-gray-600 sm:w-64 sm:border-r sm:min-h-screen">
       <SidebarItems
         sidebar={sidebar}
         toggleSidebar={toggleSidebar}

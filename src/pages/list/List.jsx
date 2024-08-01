@@ -4,7 +4,7 @@ import DataTable from "../../components/DataTable.jsx";
 
 const List = () => {
   return (
-    <div className="flex flex-col sm:flex-row list">
+    <div className="flex flex-col sm:flex-row dark:bg-[#222] list">
       <Sidebar />
       <div className="w-full overflow-x-auto listContainer">
         <Navbar />

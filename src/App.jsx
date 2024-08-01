@@ -5,10 +5,13 @@ import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
 import { productInputs, userInputs } from "./formsource";
+import { useContext } from "react";
+import { DarModeContext } from "./context/darkModeContext";
 
 export default function App() {
+  const { darkMode } = useContext(DarModeContext);
   return (
-    <div>
+    <div className={darkMode ? "dark" : ""}>
       <BrowserRouter>
         <Routes>
           <Route path="/">

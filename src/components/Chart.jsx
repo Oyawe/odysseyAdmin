@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
   LineChart,
   Line,
@@ -6,6 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { DarModeContext } from "../context/darkModeContext";
 
 const data = [
   { name: "January", Total: 1200 },
@@ -18,8 +20,9 @@ const data = [
 
 // eslint-disable-next-line react/prop-types
 export const Chart = ({ height, title }) => {
+  const { darkMode } = useContext(DarModeContext);
   return (
-    <div className="flex flex-col flex-1 chart min-h-[200px] sm:min-h-[300px] shadow-md shadow-slate-400 sm:p-4 p-0">
+    <div className="flex flex-col flex-1 chart min-h-[200px] sm:min-h-[300px] shadow-md shadow-slate-400 dark:shadow-gray-600 sm:p-4 p-0">
       <div className="p-2 text-xl text-gray-400 title">{title}</div>
       <ResponsiveContainer width="100%" height={height}>
         <LineChart
@@ -28,7 +31,14 @@ export const Chart = ({ height, title }) => {
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
         >
-          <CartesianGrid strokeDasharray="3 3" className="chartGrid" />
+          <CartesianGrid
+            strokeDasharray="3 3"
+            stroke={
+              darkMode
+                ? "rgba(228, 225, 225, 0.438)"
+                : "rgba(114, 109, 114, 0.34)"
+            }
+          />
           <XAxis dataKey="name" />
           <Tooltip />
           <Line

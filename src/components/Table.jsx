@@ -65,7 +65,7 @@ export const TableComp = () => {
 
   return (
     <div className="overflow-y-scroll ">
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} className="dark:bg-[#11111157]">
         <Table
           sx={{
             minWidth: 650,
@@ -74,27 +74,27 @@ export const TableComp = () => {
         >
           <TableHead>
             <TableRow>
-              <TableCell sx={sx} className="tableCell">
+              <TableCell sx={sx} className="tableCell dark:text-gray-300">
                 <div className="">Tracking(ID)</div>
               </TableCell>
-              <TableCell sx={sx} className="tableCell">
+              <TableCell sx={sx} className="tableCell dark:text-gray-300">
                 Product
               </TableCell>
-              <TableCell sx={sx} className="tableCell">
+              <TableCell sx={sx} className="tableCell dark:text-gray-300">
                 Customer
               </TableCell>
-              <TableCell sx={sx} className="tableCell">
+              <TableCell sx={sx} className="tableCell dark:text-gray-300">
                 Date
               </TableCell>
-              <TableCell sx={sx} className="tableCell">
+              <TableCell sx={sx} className="tableCell dark:text-gray-300">
                 Amount
               </TableCell>
-              <TableCell sx={sx} className="tableCell">
+              <TableCell sx={sx} className="tableCell dark:text-gray-300">
                 <div className="text-center md:text-center lg:text-start">
                   Payment Method
                 </div>
               </TableCell>
-              <TableCell sx={sx} className="tableCell">
+              <TableCell sx={sx} className="tableCell dark:text-gray-300">
                 Status
               </TableCell>
             </TableRow>
@@ -102,10 +102,10 @@ export const TableComp = () => {
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.id}>
-                <TableCell sx={sxF} className="tableCell">
+                <TableCell sx={sxF} className="tableCell dark:text-gray-300">
                   {row.id}
                 </TableCell>
-                <TableCell sx={sxF} className="tableCell">
+                <TableCell sx={sxF} className="tableCell dark:text-gray-300">
                   <div className="flex items-center space-y-0 cell-wrapper">
                     <img
                       src={row.img}
@@ -117,24 +117,24 @@ export const TableComp = () => {
                     </div>
                   </div>
                 </TableCell>
-                <TableCell sx={sxF} className="tableCell">
+                <TableCell sx={sxF} className="tableCell dark:text-gray-300">
                   {row.customer}
                 </TableCell>
-                <TableCell sx={sxF} className="tableCell">
+                <TableCell sx={sxF} className="tableCell dark:text-gray-300">
                   {row.date}
                 </TableCell>
-                <TableCell sx={sxF} className="tableCell">
+                <TableCell sx={sxF} className="tableCell dark:text-gray-300">
                   {row.amount}
                 </TableCell>
-                <TableCell sx={sxF} className="tableCell">
+                <TableCell sx={sxF} className="tableCell dark:text-gray-300">
                   {row.method}
                 </TableCell>
-                <TableCell sx={sxF} className="tableCell">
+                <TableCell sx={sxF} className="tableCell dark:text-gray-300">
                   <span
                     className={`${
                       row.status === "Approved"
-                        ? `text-green-600 bg-green-100`
-                        : `text-yellow-600 bg-yellow-50`
+                        ? `text-green-600 bg-green-100 dark:text-white dark:bg-green-700`
+                        : `text-yellow-600 bg-yellow-50 dark:text-white dark:bg-yellow-700`
                     }  p-2 rounded-lg `}
                   >
                     {row.status}

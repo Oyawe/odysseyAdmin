@@ -36,11 +36,13 @@ export const userColumns = [
       return (
         <span
           className={`${
-            (params.row.status === "active" && `text-green-600 bg-green-100`) ||
+            (params.row.status === "active" &&
+              `text-green-600 bg-green-100 dark:bg-green-800 dark:text-gray-300`) ||
             (params.row.status === "pending" &&
-              `text-yellow-600 bg-yellow-50`) ||
-            (params.row.status === "passive" && `text-red-600 bg-red-50`)
-          }  p-2 rounded-lg  `}
+              `text-yellow-600 bg-yellow-50 dark:bg-yellow-800 dark:text-gray-300`) ||
+            (params.row.status === "passive" &&
+              `text-red-600 bg-red-50 dark:bg-red-800 dark:text-gray-300`)
+          }  px-2 py-1 rounded-lg  `}
         >
           {params.row.status}
         </span>

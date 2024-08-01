@@ -9,14 +9,14 @@ const New = ({ inputs, title }) => {
   // console.log(file);
 
   return (
-    <div className="flex flex-col sm:flex-row new">
+    <div className="flex flex-col dark:bg-[#222] sm:flex-row new">
       <Sidebar />
       <div className="w-full newContainer">
         <Navbar />
-        <div className="p-5 m-5 mt-16 shadow sm:mt-6 top shadow-slate-400">
+        <div className="p-5 m-5 mt-16 shadow sm:mt-6 top shadow-slate-400 dark:shadow-gray-600">
           <h1 className="text-2xl font-semibold text-gray-400">{title}</h1>
         </div>
-        <div className="flex flex-col p-4 m-5 shadow-md lg:flex-row shadow-slate-400 bottom">
+        <div className="flex flex-col p-4 m-5 shadow-md lg:flex-row shadow-slate-400 dark:shadow-gray-600 bottom">
           <div className="flex justify-center basis-1/3 left">
             <img
               src={
@@ -29,7 +29,7 @@ const New = ({ inputs, title }) => {
             />
           </div>
           <div className="mt-8 lg:mt-0 right">
-            <form className="flex flex-col flex-wrap justify-around lg:flex-row gap-7">
+            <form className="flex flex-col flex-wrap justify-around lg:flex-row gap-7 dark:text-gray-300">
               <div className="formInput w-[40%]">
                 <label className="flex items-center gap-1" htmlFor="file">
                   Image:{" "}
@@ -47,7 +47,7 @@ const New = ({ inputs, title }) => {
                 <div key={input.id} className="formInput w-full lg:w-[40%]">
                   <label>{input.label}</label>
                   <input
-                    className="w-full p-1 border-b border-gray-400 outline-none"
+                    className="w-full p-1 border-b border-gray-400 outline-none dark:bg-transparent"
                     type={input.type}
                     placeholder={input.placeholder}
                   />
