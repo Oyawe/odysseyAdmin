@@ -161,14 +161,14 @@ export default function SidebarItems({ toggleSidebar, sidebar, isActive }) {
           isActive ? "bg-white dark:bg-[#222] py-4 shadow-md" : "bg-none py-4"
         } fixed w-full z-50 transition-all flex items-center justify-between p-4 border-b dark:border-gray-600 md:hidden lg:hidden`}
       >
-        <Link to="/">
+        <a href="#">
           <span
             id="logo"
             className="text-xl font-bold text-center text-transparent bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text "
           >
             OdysseyAdmin
           </span>
-        </Link>
+        </a>
         <div className="mr-1">
           <button onClick={toggleSidebar} className="">
             {sidebar ? (
