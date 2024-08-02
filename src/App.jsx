@@ -8,14 +8,20 @@ import New from "./pages/new/New";
 import { productInputs, userInputs } from "./formsource";
 import { useContext } from "react";
 import { DarModeContext } from "./context/darkModeContext";
+import { AuthContext } from "./context/AuthContext";
 
 export default function App() {
   const { darkMode } = useContext(DarModeContext);
-  const currentUser = false;
+  // const currentUser = true;
+
+  const { currentUser } = useContext(AuthContext);
+
+  // console.log(currentUser);
 
   const RequireAuth = ({ children }) => {
     return currentUser ? children : <Navigate to="/login" />;
   };
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <BrowserRouter>
