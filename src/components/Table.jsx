@@ -122,7 +122,7 @@ export const TableComp = () => {
                   {row.date}
                 </TableCell>
                 <TableCell sx={sxF} className="tableCell dark:text-gray-300">
-                  {row.amount}
+                  ${row.amount}
                 </TableCell>
                 <TableCell sx={sxF} className="tableCell dark:text-gray-300">
                   {row.method}
