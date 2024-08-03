@@ -133,12 +133,14 @@ export default function SidebarItems({ toggleSidebar, sidebar, isActive }) {
                 Profile
               </span>
             </li>
-            <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100 dark:hover:bg-black">
-              <LogoutIcon className="text-blue-500" />
-              <span className="text-[18px] dark:text-gray-300 ml-2 text-gray-500">
-                Logout
-              </span>
-            </li>
+            <Link to="/login">
+              <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100 dark:hover:bg-black">
+                <LogoutIcon className="text-blue-500" />
+                <span className="text-[18px] dark:text-gray-300 ml-2 text-gray-500">
+                  Logout
+                </span>
+              </li>
+            </Link>
           </ul>
           <div id="bottom" className="flex items-center m-3">
             <div
@@ -284,12 +286,14 @@ export default function SidebarItems({ toggleSidebar, sidebar, isActive }) {
                   Profile
                 </span>
               </li>
-              <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100 dark:hover:bg-black">
-                <LogoutIcon className="text-blue-500" />
-                <span className="text-[18px] dark:text-gray-300 ml-2 text-gray-500">
-                  Logout
-                </span>
-              </li>
+              <Link to="/login">
+                <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100 dark:hover:bg-black">
+                  <LogoutIcon className="text-blue-500" />
+                  <span className="text-[18px] dark:text-gray-300 ml-2 text-gray-500">
+                    Logout
+                  </span>
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
