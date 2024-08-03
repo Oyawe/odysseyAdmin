@@ -35,6 +35,7 @@ export default function Widget({ type }) {
       data = {
         title: "ORDERS",
         isMoney: false,
+        query: "orders",
         link: "View all orders",
         icon: <ShoppingCartCheckoutOutlined className="text-blue-600 icon" />,
       };
@@ -50,7 +51,7 @@ export default function Widget({ type }) {
     case "product":
       data = {
         title: "PRODUCTS",
-        query: "product",
+        query: "products",
         link: "See details",
         icon: <AccountBalanceOutlined className="text-purple-600 icon" />,
       };
@@ -94,7 +95,7 @@ export default function Widget({ type }) {
       <div className="flex flex-col justify-between space-y-4 md:space-y-3 lg:space-y-0 ">
         <span className="text-lg text-gray-400 title">{data.title}</span>
         <span className="text-3xl font-extralight dark:text-gray-300">
-          {data.isMoney && "$"}
+          {data.isMoney && "$0"}
           {amount}
         </span>
         <span className="text-lg font-medium border-b border-gray-500 dark:text-gray-300 link">
@@ -104,10 +105,10 @@ export default function Widget({ type }) {
       <div className="flex flex-col items-center justify-between ">
         <div
           className={`flex items-center text-lg text-green-600 percentage ${
-            diff < 0 ? "text-red-500" : ""
+            diff <= 0 ? "text-red-500" : ""
           }`}
         >
-          {diff < 0 ? <KeyboardArrowDown /> : <KeyboardArrowUpIcon />}
+          {diff <= 0 ? <KeyboardArrowDown /> : <KeyboardArrowUpIcon />}
           {/* <KeyboardArrowUpIcon /> */}
           {diff}%
         </div>
