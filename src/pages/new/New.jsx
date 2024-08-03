@@ -4,8 +4,8 @@ import { Navbar } from "../../components/Navbar";
 import { Sidebar } from "../../components/Sidebar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import {
-  addDoc,
-  collection,
+  // addDoc,
+  // collection,
   doc,
   serverTimestamp,
   setDoc,
@@ -13,7 +13,7 @@ import {
 import { auth, db, storage } from "../../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {
-  getStorage,
+  // getStorage,
   ref,
   uploadBytesResumable,
   getDownloadURL,

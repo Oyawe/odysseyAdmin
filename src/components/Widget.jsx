@@ -50,7 +50,7 @@ export default function Widget({ type }) {
     case "product":
       data = {
         title: "PRODUCTS",
-        query: "products",
+        query: "product",
         link: "See details",
         icon: <AccountBalanceOutlined className="text-purple-600 icon" />,
       };

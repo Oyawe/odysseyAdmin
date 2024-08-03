@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { DarModeContext } from "../context/darkModeContext";
 import {
   collection,
-  getDocs,
+  // getDocs,
   deleteDoc,
   doc,
   onSnapshot,
