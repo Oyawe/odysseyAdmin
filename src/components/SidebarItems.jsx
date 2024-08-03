@@ -149,7 +149,10 @@ export default function SidebarItems({ toggleSidebar, sidebar, isActive }) {
             <div
               id="colorOption"
               className="w-6 h-6 m-1 bg-black border border-blue-500 rounded-md cursor-pointer"
-              onClick={() => dispatch({ type: "DARK" })}
+              onClick={(e) => {
+                dispatch({ type: "DARK" });
+                e.preventDefault();
+              }}
             ></div>
           </div>
         </div>

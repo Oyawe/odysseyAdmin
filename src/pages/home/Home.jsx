@@ -14,9 +14,9 @@ const Home = () => {
           <Navbar />
           <div className="flex flex-col flex-wrap gap-5 p-5 mt-7 sm:mt-0 sm:flex-row md:flex-col lg:flex-row">
             <Widget type="user" />
+            <Widget type="product" />
             <Widget type="order" />
             <Widget type="earnings" />
-            <Widget type="balance" />
           </div>
           <div className="flex flex-col flex-wrap gap-6 p-5 charts sm:mt-0 sm:flex-row md:flex-col lg:flex-row">
             <Featured />

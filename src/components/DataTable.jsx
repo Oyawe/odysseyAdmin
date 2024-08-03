@@ -1,15 +1,68 @@
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../datasource";
+import { userColumns } from "../datasource";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { DarModeContext } from "../context/darkModeContext";
+import {
+  collection,
+  getDocs,
+  deleteDoc,
+  doc,
+  onSnapshot,
+} from "firebase/firestore";
+import { db } from "../firebase";
 
 const DataTable = () => {
   const { darkMode } = useContext(DarModeContext);
-  const [data, setData] = useState(userRows);
+  const [data, setData] = useState([]);
 
-  const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+  useEffect(() => {
+    // const fetchData = async () => {
+    //   let list = [];
+    //   try {
+    //     const querySnapshot = await getDocs(collection(db, "users"));
+    //     querySnapshot.forEach((doc) => {
+    //       list.push({ id: doc.id, ...doc.data() });
+    //       // console.log(doc.id, " => ", doc.data());
+    //     });
+    //     setData(list);
+    //     // console.log(list);
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // };
+    // fetchData();
+
+    //Listen to real time change
+    const unsub = onSnapshot(
+      collection(db, "users"),
+      (snapShot) => {
+        // console.log("Current data: ", doc.data());
+        let list = [];
+        snapShot.docs.forEach((doc) => {
+          list.push({ id: doc.id, ...doc.data() });
+        });
+        setData(list);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+
+    return () => {
+      unsub();
+    };
+  }, []);
+
+  // console.log(data);
+
+  const handleDelete = async (id) => {
+    try {
+      await deleteDoc(doc(db, "users", id));
+      setData(data.filter((item) => item.id !== id));
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const actionColumn = [
