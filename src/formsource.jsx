@@ -1,41 +1,41 @@
 export const userInputs = [
   {
-    id: 1,
+    id: "username",
     label: "Username",
     type: "text",
     placeholder: "ashley_cole",
   },
   {
-    id: 2,
+    id: "displayName",
     label: "Full Name",
     type: "text",
     placeholder: "Ashley Cole",
   },
   {
-    id: 3,
+    id: "email",
     label: "Email",
     type: "mail",
     placeholder: "ashleycole@gmail.com",
   },
   {
-    id: 4,
+    id: "phone",
     label: "Phone",
     type: "text",
     placeholder: "+234 915 5673 289",
   },
   {
-    id: 5,
+    id: "password",
     label: "Password",
     type: "password",
   },
   {
-    id: 6,
+    id: "address",
     label: "Address",
     type: "text",
     placeholder: "No 13. Peace Estate. Ojurin Akobo. Ibadan",
   },
   {
-    id: 7,
+    id: "country",
     label: "Country",
     type: "text",
     placeholder: "Nigeria",
