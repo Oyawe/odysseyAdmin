@@ -116,7 +116,7 @@ export default function Widget({ type }) {
             data.title === "USERS" ? `bg-red-100` : ""
           } ${data.title === "ORDERS" ? `bg-blue-100` : ""} ${
             data.title === "EARNINGS" ? `bg-green-100` : ""
-          } ${data.title === "BALANCE" ? `bg-purple-100` : ""}  `}
+          } ${data.title === "PRODUCTS" ? `bg-purple-100` : ""}  `}
         >
           {data.icon}
           {/* <Person2OutlinedIcon className="text-white" /> */}
