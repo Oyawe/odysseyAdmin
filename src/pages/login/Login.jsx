@@ -56,6 +56,8 @@ const Login = () => {
         >
           Login
         </button>
+        <span className="mt-2 text-gray-500">test_email: admin@ire.dev</span>
+        <span className="text-gray-500">test_password: 123456</span>
         {error && (
           <span className="mt-3 text-red-500">Wrong email or password!</span>
         )}
