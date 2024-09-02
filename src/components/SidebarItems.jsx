@@ -15,10 +15,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DarModeContext } from "../context/darkModeContext";
+import { AuthContext } from "../context/AuthContext";
 
 // eslint-disable-next-line react/prop-types
 export default function SidebarItems({ toggleSidebar, sidebar, isActive }) {
-  const { dispatch } = useContext(DarModeContext);
+  const { dispatch: darkModeDispatch } = useContext(DarModeContext);
+  const { dispatch: authDispatch } = useContext(AuthContext);
   return (
     <nav>
       <div id="sidebar" className="relative flex-col hidden sm:flex">
@@ -133,26 +135,29 @@ export default function SidebarItems({ toggleSidebar, sidebar, isActive }) {
                 Profile
               </span>
             </li>
-            <Link to="/login">
-              <li className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100 dark:hover:bg-black">
-                <LogoutIcon className="text-blue-500" />
-                <span className="text-[18px] dark:text-gray-300 ml-2 text-gray-500">
-                  Logout
-                </span>
-              </li>
-            </Link>
+            <li
+              onClick={() => {
+                authDispatch({ type: "LOGOUT" });
+              }}
+              className="flex items-center gap-2 p-2 text-xl cursor-pointer hover:bg-blue-100 dark:hover:bg-black"
+            >
+              <LogoutIcon className="text-blue-500" />
+              <span className="text-[18px] dark:text-gray-300 ml-2 text-gray-500">
+                Logout
+              </span>
+            </li>
           </ul>
           <div id="bottom" className="flex items-center m-3">
             <div
               id="colorOption"
               className="w-6 h-6 m-1 bg-white border border-blue-500 rounded-md cursor-pointer"
-              onClick={() => dispatch({ type: "LIGHT" })}
+              onClick={() => darkModeDispatch({ type: "LIGHT" })}
             ></div>
             <div
               id="colorOption"
               className="w-6 h-6 m-1 bg-black border border-blue-500 rounded-md cursor-pointer"
               onClick={(e) => {
-                dispatch({ type: "DARK" });
+                darkModeDispatch({ type: "DARK" });
                 e.preventDefault();
               }}
             ></div>
@@ -286,14 +291,17 @@ export default function SidebarItems({ toggleSidebar, sidebar, isActive }) {
                   Profile
                 </span>
               </li>
-              <Link to="/login">
-                <li className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100 dark:hover:bg-black">
-                  <LogoutIcon className="text-blue-500" />
-                  <span className="text-[18px] dark:text-gray-300 ml-2 text-gray-500">
-                    Logout
-                  </span>
-                </li>
-              </Link>
+              <li
+                onClick={() => {
+                  authDispatch({ type: "LOGOUT" });
+                }}
+                className="flex items-center gap-2 p-2 text-xl hover:bg-blue-100 dark:hover:bg-black"
+              >
+                <LogoutIcon className="text-blue-500" />
+                <span className="text-[18px] dark:text-gray-300 ml-2 text-gray-500">
+                  Logout
+                </span>
+              </li>
             </ul>
           </div>
         </div>
